@@ -41,6 +41,16 @@ const resolvers = {
       }
       return userMeasures;
     },
+    sponsoredResolutions: (user) => {
+      const userSponsors = sponsors.filter(sponsor => sponsor.userId === user.id);
+      const userMeasures = userSponsors.map(sponsor => measures.find(measure => measure.id === sponsor.measureId));
+      return userMeasures.filter(measure => measure.type === 'RESOLUTION').length;
+    },
+    sponsoredBills: (user) => {
+      const userSponsors = sponsors.filter(sponsor => sponsor.userId === user.id);
+      const userMeasures = userSponsors.map(sponsor => measures.find(measure => measure.id === sponsor.measureId));
+      return userMeasures.filter(measure => measure.type === 'BILL').length;
+    },
   },
 
   Measure: {

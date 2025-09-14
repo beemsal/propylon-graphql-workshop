@@ -7,6 +7,8 @@ const typeDefs = gql`
     email: String!
     role: UserRole!
     sponsoredMeasures(type: MeasureType, isPrimary: Boolean): [Measure!]!
+    sponsoredResolutions: Int!
+    sponsoredBills: Int!
   }
 
   enum UserRole {

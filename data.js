@@ -592,6 +592,34 @@ let sponsors = [
     measureId: '15',
     isPrimary: false,
     dateSponsored: '2023-09-22'
+  },
+  {
+    id: '31',
+    userId: '1',
+    measureId: '7',
+    isPrimary: false,
+    dateSponsored: '2023-10-12'
+  },
+  {
+    id: '32',
+    userId: '1',
+    measureId: '15',
+    isPrimary: false,
+    dateSponsored: '2023-09-25'
+  },
+  {
+    id: '33',
+    userId: '2',
+    measureId: '9',
+    isPrimary: false,
+    dateSponsored: '2023-09-05'
+  },
+  {
+    id: '34',
+    userId: '2',
+    measureId: '17',
+    isPrimary: false,
+    dateSponsored: '2023-07-30'
   }
 ];
 
