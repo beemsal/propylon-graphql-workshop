@@ -13,6 +13,13 @@ const resolvers = {
       const userMeasures = userSponsors.map(sponsor => measures.find(measure => measure.id === sponsor.measureId));
       return type ? userMeasures.filter(measure => measure.type === type) : userMeasures;
     },
+    measuresByName: (_, { name }) => {
+      return measures.filter(measure => {
+        const typePrefix = measure.type === 'BILL' ? (measure.chamber === 'HOUSE' ? 'HB' : 'SB') : (measure.chamber === 'HOUSE' ? 'HR' : 'SR');
+        const measureName = `${typePrefix}${measure.number}`;
+        return measureName === name;
+      });
+    },
     amendments: () => amendments,
     amendment: (_, { id }) => amendments.find(amendment => amendment.id === id),
     amendmentsByUser: (_, { userId, status }) => {
@@ -23,15 +30,17 @@ const resolvers = {
   },
 
   User: {
-    sponsoredMeasures: (user) => {
-      const userSponsors = sponsors.filter(sponsor => sponsor.userId === user.id);
-      return userSponsors.map(sponsor => measures.find(measure => measure.id === sponsor.measureId));
+    sponsoredMeasures: (user, { type, isPrimary }) => {
+      let userSponsors = sponsors.filter(sponsor => sponsor.userId === user.id);
+      if (isPrimary !== undefined) {
+        userSponsors = userSponsors.filter(sponsor => sponsor.isPrimary === isPrimary);
+      }
+      let userMeasures = userSponsors.map(sponsor => measures.find(measure => measure.id === sponsor.measureId));
+      if (type !== undefined) {
+        userMeasures = userMeasures.filter(measure => measure.type === type);
+      }
+      return userMeasures;
     },
-    sponsoredMeasuresByType: (user, { type }) => {
-      const userSponsors = sponsors.filter(sponsor => sponsor.userId === user.id);
-      const userMeasures = userSponsors.map(sponsor => measures.find(measure => measure.id === sponsor.measureId));
-      return userMeasures.filter(measure => measure.type === type);
-    }
   },
 
   Measure: {

@@ -6,8 +6,7 @@ const typeDefs = gql`
     name: String!
     email: String!
     role: UserRole!
-    sponsoredMeasures: [Measure!]!
-    sponsoredMeasuresByType(type: MeasureType!): [Measure!]!
+    sponsoredMeasures(type: MeasureType, isPrimary: Boolean): [Measure!]!
   }
 
   enum UserRole {
@@ -97,6 +96,7 @@ const typeDefs = gql`
     measuresByStatus(status: MeasureStatus!): [Measure!]!
     measuresByType(type: MeasureType!): [Measure!]!
     measuresByUser(userId: ID!, type: MeasureType): [Measure!]!
+    measuresByName(name: String!): [Measure!]!
     amendments: [Amendment!]!
     amendment(id: ID!): Amendment
     amendmentsByUser(userId: ID!, status: AmendmentStatus): [Amendment!]!
