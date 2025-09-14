@@ -15,6 +15,10 @@ const resolvers = {
     },
     amendments: () => amendments,
     amendment: (_, { id }) => amendments.find(amendment => amendment.id === id),
+    amendmentsByUser: (_, { userId, status }) => {
+      const userAmendments = amendments.filter(amendment => amendment.proposedById === userId);
+      return status ? userAmendments.filter(amendment => amendment.status === status) : userAmendments;
+    },
     sponsors: () => sponsors
   },
 

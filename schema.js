@@ -99,6 +99,7 @@ const typeDefs = gql`
     measuresByUser(userId: ID!, type: MeasureType): [Measure!]!
     amendments: [Amendment!]!
     amendment(id: ID!): Amendment
+    amendmentsByUser(userId: ID!, status: AmendmentStatus): [Amendment!]!
     sponsors: [Sponsor!]!
   }
 
