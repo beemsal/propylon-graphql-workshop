@@ -715,6 +715,126 @@ let amendments = [
     proposedDate: '2023-10-12',
     status: 'WITHDRAWN',
     content: 'Section 3.4: Establish state-sponsored carbon offset programs for businesses...'
+  },
+  {
+    id: '13',
+    title: 'Electric Vehicle Infrastructure Amendment',
+    description: 'Expand electric vehicle charging infrastructure',
+    measureId: '1',
+    proposedById: '2',
+    proposedDate: '2024-02-15',
+    status: 'PROPOSED',
+    content: 'Section 5.1: Public charging stations shall be installed in all state buildings...'
+  },
+  {
+    id: '14',
+    title: 'Green Building Standards Amendment',
+    description: 'Mandatory green building standards for new construction',
+    measureId: '1',
+    proposedById: '2',
+    proposedDate: '2024-02-20',
+    status: 'ACCEPTED',
+    content: 'Section 6.1: All new public buildings must meet LEED Gold standards...'
+  },
+  {
+    id: '15',
+    title: 'Teacher Retention Bonus Amendment',
+    description: 'Additional funding for teacher retention bonuses',
+    measureId: '2',
+    proposedById: '5',
+    proposedDate: '2024-02-18',
+    status: 'PROPOSED',
+    content: 'Section 4.1: Teachers in rural districts shall receive annual retention bonuses...'
+  },
+  {
+    id: '16',
+    title: 'Special Education Funding Amendment',
+    description: 'Enhanced funding for special education programs',
+    measureId: '2',
+    proposedById: '7',
+    proposedDate: '2024-02-22',
+    status: 'ACCEPTED',
+    content: 'Section 5.1: Special education programs shall receive 25% additional funding...'
+  },
+  {
+    id: '17',
+    title: 'Prescription Drug Transparency Amendment',
+    description: 'Include prescription drug pricing in transparency requirements',
+    measureId: '3',
+    proposedById: '9',
+    proposedDate: '2024-02-25',
+    status: 'PROPOSED',
+    content: 'Section 6.1: Pharmacies must publish standard prescription drug prices...'
+  },
+  {
+    id: '18',
+    title: 'Road Maintenance Priority Amendment',
+    description: 'Prioritize rural road maintenance in infrastructure spending',
+    measureId: '4',
+    proposedById: '11',
+    proposedDate: '2024-02-10',
+    status: 'REJECTED',
+    content: 'Section 4.1: Rural road maintenance shall receive 40% of infrastructure funds...'
+  },
+  {
+    id: '19',
+    title: 'Biometric Data Protection Amendment',
+    description: 'Special protections for biometric data',
+    measureId: '5',
+    proposedById: '13',
+    proposedDate: '2024-01-28',
+    status: 'PROPOSED',
+    content: 'Section 7.1: Biometric data requires explicit consent and special handling...'
+  },
+  {
+    id: '20',
+    title: 'Small Business Registration Streamlining Amendment',
+    description: 'Simplify small business registration processes',
+    measureId: '6',
+    proposedById: '15',
+    proposedDate: '2024-01-15',
+    status: 'ACCEPTED',
+    content: 'Section 3.1: Small business registration shall be completed within 5 business days...'
+  },
+  {
+    id: '21',
+    title: 'Incident Response Protocol Amendment',
+    description: 'Enhanced cybersecurity incident response protocols',
+    measureId: '10',
+    proposedById: '17',
+    proposedDate: '2024-03-12',
+    status: 'PROPOSED',
+    content: 'Section 3.1: All agencies must have 24/7 incident response capabilities...'
+  },
+  {
+    id: '22',
+    title: 'Multi-Factor Authentication Amendment',
+    description: 'Mandatory multi-factor authentication for all state systems',
+    measureId: '10',
+    proposedById: '17',
+    proposedDate: '2024-03-15',
+    status: 'ACCEPTED',
+    content: 'Section 4.1: All state employees must use multi-factor authentication...'
+  },
+  {
+    id: '23',
+    title: 'Peer Support Program Amendment',
+    description: 'Establish peer support programs for mental health',
+    measureId: '11',
+    proposedById: '20',
+    proposedDate: '2024-03-02',
+    status: 'PROPOSED',
+    content: 'Section 4.1: Peer support programs shall be established in all communities...'
+  },
+  {
+    id: '24',
+    title: 'Precision Agriculture Amendment',
+    description: 'Support for precision agriculture technology',
+    measureId: '12',
+    proposedById: '25',
+    proposedDate: '2024-02-28',
+    status: 'ACCEPTED',
+    content: 'Section 3.1: GPS-guided farming equipment qualifies for technology grants...'
   }
 ];
 
